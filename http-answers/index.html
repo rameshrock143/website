@@ -1,0 +1,60 @@
+<!DOCKTYPE html>
+<html>
+<head>
+<title>Questions And Answers</title>
+<meta charset="utf-8" />
+<head>
+	<body>
+		<h1>HTTP AND SECURITY</h1>
+		<p>
+			<ol>
+				<li><strong>What is the Hypertext Transfer Protocol (HTTP)</strong></li>
+				ans:Hypertext Transfer Protocol (HTTP) is an application-layer protocol for transmitting hypermedia documents, such as HTML. It was designed for communication between web browsers and web servers, but it can also be used for other purposes. HTTP follows a classical client-server model, with a client opening a connection to make a request, then waiting until it receives a response.
+                
+				<li><strong>Why is HTTP called a stateless protocol?</strong></li>
+				ans:HTTP is called stateless protocol as the server does not keep any data (state) between two request.
+
+				<li><strong>Describe the three phases of establishing a session using client-server protocols such as HTTP</strong></li>
+				ans:In client-server protocols, like HTTP, sessions consist of three phases:
+
+                1st-The client establishes a TCP connection (or the appropriate connection if the transport layer is not TCP).
+
+                2nd-The client sends its request, and waits for the answer.
+                
+                3rd-The server processes the request, sending back its answer, providing a status code and appropriate data.
+
+                As of HTTP/1.1, the connection is no longer closed after completing the third phase, and the client is now granted a further request: this means the second and third phases can now be performed any number of times.
+
+				<li><strong>Describe the parameters on a get and post request.</strong></li>
+				ans:
+                <li><strong>What are the HTTP response status code and What do the HTTP status codes, 200, and 404 indicate?</strong></li>
+                ans:HTTP response status codes indicate whether a specific HTTP request has been successfully completed. Responses are grouped in five classes: informational responses, successful responses, redirects, client errors, and servers errors. The below status codes are defined by section 10 of RFC 2616. You can find an updated specification in RFC 7231. 
+                <p>202 Accepted::
+                The request has been received but not yet acted upon. It is non-committal, meaning that there is no way in HTTP to later send an asynchronous response indicating the outcome of processing the request. It is intended for cases where another process or server handles the request, or for batch processing.</p>
+                <p>404 Not Found::
+                 The server can not find requested resource. In the browser, this means the URL is not recognized. In an API, this can also mean that the endpoint is valid but the resource itself does not exist. Servers may also send this response instead of 403 to hide the existence of a resource from an unauthorized client. This response code is probably the most famous one due to its frequent occurence on the web</p> 
+                <li><strong>What are HTTP cookies? Give an example.</strong></li>
+                ans:An HTTP cookie (also called web cookie, Internet cookie, browser cookie, or simply cookie) is a small piece of data sent from a website and stored on the user's computer by the user's web browser while the user is browsing. 	
+                Typically, it's used to tell if two requests came from the same browser — keeping a user logged-in, for example. It remembers stateful information for the stateless HTTP protocol.
+
+                <li><strong>Why are cookies a security issue?</strong></li>
+                ans:Common risks of cookies are:
+
+                 <p>1. Cross Site Request Forgery Attack (XSRF)</p>
+                 <p>2. Session Fixation</p>
+                 <p>3. Cross-Site Scripting</p>
+                 <p>4. Cookie Tossing Attack</p>
+                 <p>5. Cookie Overflow Attack</p>
+                <li><strong>Describe session hijacking and XSS</strong></li>
+                ans:<p>In hijackings, the attacker uses an exploit on a device to take over a session between this device and a host. It disconnects then the device from the communication. The server still believes that it is communicating to the original device and sends private information to the attacker.</p>
+                <p>Companies like Twitter, Facebook, MySpace or YouTube have experienced XSS attacks in different forms, that represent one of the main threats to the net.The XSS attack principle lies in the trust the client places in the server, and the ability to mix up Javascript scripts with HTML information descriptions in a web page. The attacker exploits the application XSS vulnerabilities in order to inject a script into the web page used by the device. The injected script can either point the user transparently to a malicious server or allow the attacker to hijack the user's session and execute dangerous commands.
+  
+                 </p>
+                <li><strong>Describe Cross-site request forgery(CSRF)</strong></li>
+                ans:Cross-Site Request Forgery (CSRF) is an attack that forces an end user to execute unwanted actions on a web application in which they're currently authenticated. CSRF attacks specifically target state-changing requests, not theft of data, since the attacker has no way to see the response to the forged request. With a little help of social engineering (such as sending a link via email or chat), an attacker may trick the users of a web application into executing actions of the attacker's choosing. If the victim is a normal user, a successful CSRF attack can force the user to perform state changing requests like transferring funds, changing their email address, and so forth. If the victim is an administrative account, CSRF can compromise the entire web application.
+                <li><strong>What are Cross-site HTTP requests (CORS) and what requests use CORS?</strong></li>
+                ans
+			</ol>
+		</p>
+	</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Responsive HTML images demo</title>
+    <style>
+      html {
+        font-family: sans-serif;
+        background-color: gray;
+      }
+
+      body {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        background-color: white;
+      }
+
+      header {
+        background: url(big-one.jpg) no-repeat center;
+        background-size: cover;
+        height: 400px;
+      }
+
+      section {
+        padding: 20px;
+      }
+
+      p {
+        line-height: 1.5;
+      }
+
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      
+    </header>
+
+    <main>
+      <section>
+        <h1>My website</h1>
+
+        <p>This is the practice code for making responsive image. This is done by Rahul Rouniyar</p>
+
+        <picture>
+          <source media="(max-width: 430px)" srcset="dogport.jpg">
+          <source media="(min-width: 800px)" srcset="dog.jpg">
+          <img src="dog.jpg" alt="Dog are great.">
+        </picture>
+
+        <p>Just an example for responsive images across different devices.</p>
+
+        <img srcset="portrait800.jpg 800w"
+             sizes="(max-width: 480px) 440px,
+                    800px"
+             src="portrait.jpg" alt="image"> 
+
+        </section>
+    </main>
+  </body>
+</html>
